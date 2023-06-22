@@ -1,3 +1,5 @@
+package Cipher;
+
 import java.util.Scanner;
 
 public class CaesarCipher {
