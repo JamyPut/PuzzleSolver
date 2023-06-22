@@ -2,18 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String puzzle = "oppfjvbikhtygrngpdmfaixoandtfzdvlnnto";
 
-        for (int i = 0; i < 32; i++) {
-            System.out.printf("Using value %d in the Caesar cipher\n", i);
+        CaesarCipher chilit = new CaesarCipher("oppfjvbikhtygrngpdmfaixoandtfzdvlnnto");
+        CaesarCipher loremIpsum = new CaesarCipher("Svylt Pwzbt pz zptwsf kbttf alea vm aol wypuapun huk afwlzlaapun pukbzayf. Svylt Pwzbt ohz illu aol pukbzayf'z zahukhyk kbttf alea lcly zpujl aol 1500z, dolu hu buruvdu wypualy avvr h nhsslf vm afwl huk zjyhtislk pa av thrl h afwl zwljptlu ivvr. Pa ohz zbycpclk uva vusf mpcl jluabyplz, iba hszv aol slhw puav lsljayvupj afwlzlaapun, ylthpupun lzzluaphssf bujohunlk. Pa dhz wvwbshypzlk pu aol 1960z dpao aol ylslhzl vm Slayhzla zollaz jvuahpupun Svylt Pwzbt whzzhnlz, huk tvyl yljluasf dpao klzravw wbispzopun zvmadhyl sprl Hskbz WhnlThrly pujsbkpun clyzpvuz vm Svylt Pwzbt.");
 
-            StringBuilder decodedMessage = new StringBuilder();
-            for (char c : puzzle.toCharArray()) {
-                char decodedChar = (char) (c - i);
-                decodedMessage.append(decodedChar);
-            }
-
-            System.out.println("Decoded message: " + decodedMessage.toString());
-        }
+        loremIpsum.solve();
     }
 }
